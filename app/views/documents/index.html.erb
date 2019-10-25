@@ -1,0 +1,13 @@
+
+<div class="centerbox">
+<h1>InnoRadar</h1>
+
+<%= render "search_form" %>
+
+<div class="tag_cloud">
+  Trends
+  <% @tags.each do |tag| %>
+    <%= link_to tag, search_path(q: tag) %>
+  <% end %>
+</div>
+</div>

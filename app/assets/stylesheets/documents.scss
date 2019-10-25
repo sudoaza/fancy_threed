@@ -1,0 +1,144 @@
+// Place all the styles related to the Documents controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body, html {
+  background:#f6f6f6;
+}
+
+a, a:active, a:visited, a:link {
+  text-decoration: none;
+}
+
+.centerbox {
+  position: absolute;
+  top:50%;left:50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); /* IE 9 */
+  -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+  min-height:52px;
+  z-index:2;
+  padding: 4px 2px;
+  margin: 0 auto;
+}
+.centerbox form, .centerbox h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+.centerbox h1 {
+  margin-bottom: 25px;
+  font-size:36px;
+  font-family: "Webly Sleek SemiLight";
+  font-weight: normal;
+  text-align: center;
+}
+
+.main-input { 
+  vertical-align: middle;
+  padding:0;
+  margin:0;
+  border: 1px solid #cccccc;
+  background: #fff;
+  height: 50px;
+  width: 327px;
+  color: #7d8580;
+  -webkit-appearance: none;
+  border-radius: 4px 0px 0px 4px;
+  -moz-border-radius: 4px 0px 0px 4px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  display: inline-block;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  padding:0px 0px 0px 17px;
+  font-size:16px;
+  border-right:0px;
+  background: #ffffff;
+}
+.main-btn {
+  vertical-align: middle;
+  padding:0;
+  margin:0;
+  border: 1px solid #cccccc;
+  border-left: 0;
+
+  background: #3cb13c;
+  color: #fff;
+  display: inline-block;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
+  width:141px;
+  height:50px;
+
+}
+.main-btn:hover { background: #00a221; color: #fff !important; -webkit-appearance: none; }
+
+
+.topbar {
+  border-bottom: 1px #ccc solid;
+}
+
+.topbar a, .topbar a:active, .topbar a:visited {
+  color: #666;
+}
+
+.topbar a:active {
+  text-decoration: underline;
+}
+
+.topbar a:hover {
+  color: #000;
+}
+
+.topbar h1 {
+  margin: 6px 10px;
+}
+
+.tag_cloud {
+  margin: 20px 4px;
+  font-size: 0.9em;
+}
+
+.category-tabs {
+  padding: 9px 10px 7px;
+}
+
+.category-tabs .tab {
+  margin: 4px 2px;
+}
+
+.row { display: block; width: 100%; margin: 0; padding: 3px 0; }
+
+.col-2, .col-10, .col-6 { display: inline-block; margin: 0; padding: 0; vertical-align: top; }
+
+.col-2 {
+  width: 16.5%;
+}
+.col-6 { 
+  width:50%;
+}
+.col-10 {
+  width: 83%;
+}
+
+.result h3 {
+  font-size: 0.95em;
+  margin: 0;
+  padding: 4px 0px 2px;
+}
+.result .url {
+  color: #006621;
+  font-size: 0.75em;
+}
+
+.result .description {
+  font-size: 0.85em;
+  padding: 0 20px 4px 2px;
+  margin: 4px 0;
+}

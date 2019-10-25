@@ -1,0 +1,10 @@
+development: &default
+  index: threed_dev
+  host: 'http://elasticsearch:9200/'
+  log: true
+test:
+  host: 'http://elasticsearch:9200/'
+  index: threed_test
+production:
+  host: 'http://elasticsearch:9200/'
+  index: threed_prod

@@ -1,0 +1,55 @@
+<header class="row topbar">
+  <div class="col-2">
+    <h1><%= link_to 'InnoRadar', root_path %></h1>
+  </div>
+  <div class="col-10">
+  <%= render "search_form" %>
+
+  <nav class="category-tabs">
+    <%= link_to 'All', search_path(q: @query), class: 'tab' %>
+    <%= link_to 'Articles', search_path(q: @query, type: 'article'), class: 'tab' %>
+    <%= link_to 'Papers', search_path(q: @query, type: 'paper'), class: 'tab' %>
+    <%= link_to 'Patents', search_path(q: @query, type: 'patent'), class: 'tab' %>
+    <%= link_to 'People', search_path(q: @query, type: 'people'), class: 'tab' %>
+    <%= link_to 'Companies', search_path(q: @query, type: 'company'), class: 'tab' %>
+    <%= link_to 'Social Media', search_path(q: @query, type: 'socialmedia'), class: 'tab' %>
+  </nav>
+  </div>
+</header>
+
+<div class="row">
+  <div class="col-2">
+  </div>
+  <div class="col-6">
+    <div class="tag_cloud">
+      Top keywords
+      <% @tags.each do |tag| %>
+        <%= link_to tag, search_path(q: tag) %>
+      <% end %>
+    </div>
+
+    <div class="search_results">
+    <div class="result">
+    <% @results.each do |doc| %>
+      <h3>
+        <a href="<%= doc.url %>">
+          <%= doc.title %>
+        </a>
+      </h3>
+      <span class="url"><%= doc.url %></span>
+      <p class="description"><%= doc.summary[0,350] %></p>
+    <% end %>
+    </div>
+    </div>
+  </div>
+</div>
+<script>
+$(document).on('click', '.tag_cloud a', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  var sb = $('#searchfield');
+  var tg = $(e.target);
+  sb.val(sb.val() + ' ' + tg.text());
+  $('#searchbutton').click();
+});
+</script>
