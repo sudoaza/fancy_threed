@@ -1,24 +1,21 @@
-# README
+# Minimal Search Engine
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Uses Ruby on Rails as backend. Stores data in a PostgreSQL database that is indexed by ElasticSearch.
 
-Things you may want to cover:
+## Run
 
-* Ruby version
+    docker-compose up
 
-* System dependencies
+## Submit URL 
 
-* Configuration
+POST to /submit
 
-* Database creation
+## Search
 
-* Database initialization
+Use interface or GET to /search?q=search+for+kittens+here
 
-* How to run the test suite
+## Gotchas
 
-* Services (job queues, cache servers, search engines, etc.)
+ElasticSearch needs more RAM
 
-* Deployment instructions
-
-* ...
+    sudo sysctl -w vm.max_map_count=262144
